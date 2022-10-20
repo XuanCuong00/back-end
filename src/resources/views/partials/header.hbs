@@ -1,0 +1,50 @@
+<div id="navbar" class="header__menu">
+    <div class="menu_items">
+        <div class="logo__menu_header">
+            <a href="/">
+                <img class="logo_img" src="/img/logo.png" alt="">
+            </a>
+        </div>
+        <label class="item__link">
+            <a href="/">TRANG CHỦ</a>
+        </label>
+        <label for="check__menu" class="item__link">
+            <input hidden type="checkbox" class="check__menu" id="check__menu">
+            <a>THỂ LOẠI <i class="fas fa-caret-down"></i></a>
+            <div class="list__menu_films">
+                <div class="item_film"><a href="/theloai/hanhdong">Phim hành động</a></div>
+                <div class="item_film"><a href="/theloai/tinhcam">Phim tình cảm</a></div>
+                <div class="item_film"><a href="/theloai/vientuong">Phim viễn tưởng</a></div>
+            </div>
+        </label>
+        {{#if admin}}
+        <label class="item__link">
+            <a href="/admin/actions"><i class="fas fa-user-cog"></i> ADMIN</a>
+        </label>
+        {{/if}}
+    </div>
+    <div class="auth__menu">
+        {{#if login}}
+        <div class="btn_auth"><a href="/logout">Đăng xuất</a></div>
+        {{else}}
+        <div class="btn_auth"><a href="/auth/login">Đăng nhập</a></div>
+        {{/if}}
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-1.12.1.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+var titleWin = document.getElementById('title');
+if (titleWin.innerHTML == 'Trang Chủ') {
+    $(window).scroll(function () {
+              if ($(window).scrollTop() >= 150) {
+                  $('#navbar').addClass('navbar-fixed-top');
+              } else {
+                  $('#navbar').removeClass('navbar-fixed-top');
+              }
+          }); 
+}
+else {
+    $('#navbar').addClass('navbar-fixed-top');
+}
+
+</script>

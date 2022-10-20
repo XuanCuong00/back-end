@@ -1,0 +1,17 @@
+.footer__view {
+    background-color: #000000;
+    color: #4d4d4d;
+    border-top: 10px solid #1e1e1e;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 200px;
+}
+
+.footer__view_text {
+    width: 160px;
+}
+
+.footer__view_text > img {
+    width: 100%;
+}

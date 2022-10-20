@@ -1,0 +1,132 @@
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 1rem;
+    background-color: #000000;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #525252;
+}
+
+.header__menu {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    transition: .4s;
+    z-index: 100;
+    top: 20px;
+    width: 100%;
+}
+
+.navbar-fixed-top {
+    top: 0;
+    background-color: #000000;
+}
+
+.menu_items {
+    display: flex;
+    justify-content: space-evenly;
+    height: 100%;
+    align-items: center;
+}
+
+.logo__menu_header {
+    width: 120px;
+    margin-right: 100px;
+}
+
+.logo_img {
+    width: 100%;
+}
+
+.item__link {
+    position: relative;
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+.item__link > a {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.item__link > a:hover {
+    cursor: pointer;
+    text-shadow: 0 0 4px #ffffff;
+}
+
+.item__link + .item__link {
+    margin-left: 40px;
+}
+
+.list__menu_films {
+    border-radius: .4rem;
+    background-color: #ffffff;
+    padding: 20px 0px;
+    top: 45px;
+    position: absolute;
+    transition: .3s;
+    display: none;
+}
+
+.list__menu_films::after {
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: 81px;
+    transition: .3s;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid #ffffff;
+}
+
+.check__menu:checked ~ .list__menu_films {
+    left: 0;
+    min-width: 300px;
+    font-size: 20px;
+    opacity: 1;
+    display: block;
+}
+
+.item_film {
+    width: 100%;
+}
+
+.item_film + .item_film {
+    margin-top: 20px;
+}
+
+.item_film > a {
+    text-decoration: none;
+    padding: 20px;
+    color: #000000;
+}
+
+.item_film > a:hover {
+    text-shadow: 0 0 1px #000000;
+}
+
+.btn_auth {
+    margin-right: 30px;
+}
+
+.btn_auth > a {
+    text-decoration: none;
+    display: block;
+    border-radius: .3rem;
+    background-color: red;
+    padding: 8px 20px;
+    color: #ffffff;
+}
+
+.btn_auth:hover {
+    cursor: pointer;
+    opacity: .9;
+}

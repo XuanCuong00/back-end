@@ -1,0 +1,37 @@
+<div class="main_update">
+    <div class="img__update">
+        <div class="text-center text-light">Ảnh phim</div>
+        <img src="https://img.youtube.com/vi/{{data.link}}/sddefault.jpg" alt="">
+    </div>
+    <div class="add__flims_main">
+    <div class="add_main">
+        <div class="text-light text-center">{{msg}}</div>
+        <form action="/admin/updatenow/{{data._id}}" method="POST">
+            <div class="input__add">
+                <label for="">Tên phim</label>
+                <input type="text" name="ten" value="{{data.ten}}">
+            </div>
+            <div class="input__add">
+                <label for="">Thể loại</label>
+                <select name="theloai">
+                    <option value="{{data.theloai}}">{{data.theloai}}</option>
+                    <option value="Hành động">Hành động</option>
+                    <option value="Tình cảm">Tình cảm</option>
+                    <option value="Viễn tưởng">Viễn tưởng</option>
+                </select>
+            </div>
+            <div class="input__add">
+                <label for="">Link</label>
+                <input type="text" name="link" value="{{data.link}}">
+            </div>
+            <div class="input__add">
+                <label for="">Nội dung</label>
+                <input type="text" name="noidung" value="{{data.noidung}}">
+            </div>
+            <div class="input__add">
+                <input class="btn__add bg-success" type="submit" value="Đăng phim">
+            </div>
+        </form>
+    </div>
+</div>
+</div>

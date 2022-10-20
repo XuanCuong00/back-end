@@ -1,0 +1,36 @@
+<div class="main__show">
+    <div class="info_film">
+        <div class="info_film_in ">
+            <input hidden type="checkbox" class="check_info_box" id="check_info_box">
+            <div class="text-info"><b>Nội dung phim:</b>
+                <label class="check_info" id="hien" for="check_info_box">
+                    <div>Xem thêm</div>
+                </label>
+                <label class="check_info" id="an" for="check_info_box">
+                    <span>Ẩn bớt</span>
+                </label></div>
+            <div class="text-light show_info">{{show.noidung}}</div>
+        </div>
+    </div>
+    <div class="main__show__film">
+        <div class="screen__film">
+            <iframe class="film" src="https://www.youtube.com/embed/{{show.link}}" 
+            frameborder="0" 
+            allow="accelerometer; autoplay;" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+<script>
+    var hien = document.getElementById('hien');
+    var an = document.getElementById('an');
+
+    hien.onclick = function () {
+        hien.style.display = "none";
+        an.style.display = "block";
+    }
+
+    an.onclick = function () {
+        hien.style.display = "block";
+        an.style.display = "none";
+    }
+</script>

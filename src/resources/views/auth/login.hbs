@@ -1,0 +1,36 @@
+<div class="background__app">
+    <span></span>
+    <div class="login__main">
+        <div class="login__main_in">
+            <div class="text__login">
+            Đăng nhập
+            </div>
+            {{#if erro_up}}
+            <div class="msg__login">
+                <span>{{msg}}</span>
+            </div>
+            {{/if}}
+            <form action="/auth/login" method="POST">
+                <div class="input__login">
+                    <span>Tên tài khoản</span>
+                    <input class="input__login_input" type="text" name="name1" placeholder="Nhập tên tài khoản">
+                </div>
+                <div class="input__login">
+                    <span>Mật khẩu</span>
+                    <input class="input__login_input" type="password" name="pass" placeholder="Nhập mật khẩu">
+                </div>
+                <div class="input__login">
+                    <button id="btn__login" class="btn btn__login">Đăng nhập</button>
+                </div>
+        </form>
+        <div class="text-center mt-3"><a href="/auth/signup">Chưa có tài khoản</a></div>
+        </div>
+    </div>
+    <script>
+        var btnLogin = document.getElementById('btn__login');
+        
+        btnLogin.onclick = function () {
+            btnLogin.innerHTML = `<i id="spinner" class="fa fa-spinner fa-pulse"></i> `
+        }
+    </script>
+</div>

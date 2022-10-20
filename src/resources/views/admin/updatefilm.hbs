@@ -1,0 +1,27 @@
+<div class="home__login">
+    <div class="all__main_films">
+        <div class="all__films">
+            <div class="all__films-title">Tất cả phim <i class="fas fa-star"></i></div>
+            <div class="all__films-cards">
+                {{#each theMovies}}
+                <div class="card-item">
+                    <div class="hot"><i class="fas fa-film"></i> Hot</div>
+                    <a href="/showfilm/{{this.slug}}">
+                        <div class="card-item-img">
+                            <img src="https://img.youtube.com/vi/{{this.link}}/sddefault.jpg" alt="">
+                        </div>
+                        <div class="card-item-name">
+                            <span>{{this.ten}}</span>
+                        </div>
+                        <div class="card-item-info">
+                            <span>Thể loại: {{this.theloai}}</span>
+                        </div>
+                    </a>
+                    <div class="btn_delete"><a class="bg-success" href="/admin/update/{{this._id}}">Sửa phim</a></div>                
+                </div>
+                {{/each}}
+            </div>
+            {{{pagination num perpage page}}}
+        </div>
+    </div>
+</div>

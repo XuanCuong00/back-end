@@ -1,0 +1,62 @@
+{{#if login}}
+<div class="home__login">
+    {{> search}}
+    <div class="text-warning"><h3 class="text-center">{{msg}}</h3></div>
+    <div class="all__main_films">
+        <div class="all__films">
+            {{#if msg}}
+            {{else}}
+            <div class="all__films-title">Kết quả tìm kiếm: {{num}}</div>
+            {{/if}}
+            <div class="all__films-cards">
+                {{#each theMovies}}
+                <div class="card-item">
+                    <div class="hot"><i class="fas fa-film"></i> Hot</div>
+                    <a href="/showfilm/{{this.slug}}">
+                        <div class="card-item-img">
+                            <img src="https://img.youtube.com/vi/{{this.link}}/sddefault.jpg" alt="">
+                        </div>
+                        <div class="card-item-name">
+                            <span>{{this.ten}}</span>
+                        </div>
+                        <div class="card-item-info">
+                            <span>Thể loại: {{this.theloai}}</span>
+                        </div>
+                    </a>             
+                </div>
+                {{/each}}
+            </div>
+            {{{pagination num perpage page}}}
+        </div>
+    </div>
+</div>
+{{else}}
+<div class="home__logout">
+  <div class="background__app">
+    <span></span>
+    <div class="text__home">
+        <span class="text__home-1">Nhiều bộ phim hay được cập nhật liên tục.</span>
+        <span class="text__home-2">Xem phim ở mọi nơi.</span>
+        <div class="btn__home">
+           <a href="/auth/signup">Đăng ký</a> 
+        </div>
+    </div>
+</div>
+<div class="home__app1">
+    <div class="home__app1_text">
+        <div class="home__app1_text-1">
+            Xem phim mọi nơi.
+        </div>
+        <div class="home__app1_text-2">
+            Phát trực tuyến không giới hạn phim và 
+            chương trình truyền hình trên điện thoại, 
+            máy tính bảng, máy tính xách tay và TV mà không phải trả thêm phí.
+        </div>
+    </div>
+    <div class="home__app1_img">
+        <img class="img__video" src="/img/homeimg.png" alt="">
+        <video class="our-story-card-video" autoplay="" playsinline="" muted="" loop=""><source src="/video/video.m4v" type="video/mp4"></video>
+    </div>
+</div>  
+</div>
+{{/if}}

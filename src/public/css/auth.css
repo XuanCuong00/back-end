@@ -1,0 +1,74 @@
+.login__main {
+    width: 40%;
+    border-radius: .5rem;
+    min-height: 500px;
+    background-color: #000000c2;
+    z-index: 1;
+}
+
+.login__main_in {
+    padding: 50px 0px;
+    width: 65%;
+    margin: auto;
+}
+
+.text__login {
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+.input__login > span{
+    color: #ffffff;
+}
+
+.input__login + .input__login {
+    margin-top: 20px;
+}
+
+.input__login_input {
+    display: block;
+    padding: 15px 10px;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: .4rem;
+}
+
+.btn__login {
+    margin-top: 40px;
+    display: block;
+    color: #ffffff;
+    padding: 5px 10px;
+    font-size: 25px;
+    background-color: red;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: .4rem;
+}
+
+.btn__login:focus-visible {
+    border: none;
+}
+
+.btn__login:hover {
+    opacity: .8;
+    cursor: pointer;
+}
+
+.msg__login {
+    color: #ffffff;
+    background-color: rgb(230, 138, 1);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: .3rem;
+    text-align: center;
+}
+
+.msg__signup_done {
+    color: rgb(1, 199, 11);;
+    margin-bottom: 10px;
+    text-align: center;
+}
